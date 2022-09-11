@@ -1,0 +1,82 @@
+html,
+body {
+    height: 100%;
+}
+
+.header {
+    height: 100px;
+    background-color: lightblue;
+}
+
+.content {
+    height: 250px;
+    background-color: grey;
+}
+
+main div:not(:first-child) {
+    height: 100px;
+}
+
+.sign-up {
+    background-color: rgb(185, 185, 221);
+}
+
+.feature1 {
+    background-color: rgb(235, 203, 144);
+}
+
+.feature2 {
+    background-color: rgb(222, 132, 132);
+}
+
+.feature3 {
+    background-color: rgb(224, 141, 224) ;
+}
+
+@media only screen and (min-width: 678px ) {
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.content {
+    flex-basis: 100%;
+}
+
+.wrapper > *:not(.content){
+    flex-basis: 50%;
+}
+}
+
+@media only screen and (min-width: 1200px) {
+.content,
+.sign-up {
+        flex-basis: 100% !important;
+}
+
+.feature1,
+.feature2,
+.feature3 {
+    flex-basis:calc(100%/3) !important;
+}
+
+.feature1 {
+    order: 1;
+}
+
+.feature2 {
+    order: 3;
+}
+
+.feature3 {
+    order: 2;
+}
+
+.sign-up {
+    order: 4;
+}
+
+.content {
+    order: 5;
+}
+}
