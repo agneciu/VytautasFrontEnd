@@ -4,40 +4,54 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="style1.css">
-    <title>Different_forms</title>
+    <title>Mob_to_tab</title>
 </head>
 <body>
-    <header class="header">
-
+    <header class="heading with-layout">
+        <img src="logo@2x.png" alt="logo">
     </header>
-    <main class="wrapper">
 
-        <div class="content">
-
+    <main class="container with-layout">
+        <h1 class="card-header">Your journey begins here</h1>
+        <div class="card-content">
+            <form>
+                <div class="pass-log">
+                    <div class="button-layout">
+                        <button class="button-small button-pri" type="button">login</button>
+                        <button class="button-small button-sec" type="button">sign-up</button>
+                    </div>
+                    <div class="log-block">
+                        <div class="input-list">
+                            <input type="text" name="email" class="log-input" placeholder="Enter email or username">
+                            <input type="password" name="password" class="log-input" placeholder="Enter passwrod">
+                        </div>
+                        <a href="#" class="link">Forgot password?</a>
+                    </div>
+                    <button class="button-medium button-pri">
+                        log-in
+                    </button>
+                </div>
+            </form>
+        <div class="or-lab"> <span>OR</span></div>
+        <div class="soc-login">
+            <input type="button" class="facebook social">
+            <input type="button" class="google social">
+            <input type="button" class="twitter social">
+            <input type="button" class="linkedin social">
         </div>
-
-
-            <div class="sign-up">
-                sign-up
-            </div>
-
-            <div class="feature1">
-                feature1
-            </div>
-
-            <div class="feature2">
-                feature2
-            </div>
-
-            <div class="feature3">
-                feature3
-            </div>
-            
         </div>
-
     </main>
-    
+
+    <footer class="with-layout footer-general">
+        <a href="#" class="footsy">F.A.Q.</a>
+        <a href="#" class="footsy">Privacy policy</a>
+        <a href="#" class="footsy">Terms of use</a>
+        <a href="#" class="footsy">Contacts</a>
+    </footer>
 </body>
 </html>
