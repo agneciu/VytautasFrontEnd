@@ -1,0 +1,23 @@
+.ca-grid {
+    gap:10px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.ca-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .ca-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr 960px 1fr;
+}
