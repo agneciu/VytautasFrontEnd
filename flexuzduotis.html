@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>"Flex" testas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
+    />
+    <link rel="stylesheet" href="other-style.css" />
+    <link rel="stylesheet" href="flexuzdstyle.css" />
+  </head>
+  <body>
+    <main class="container">
+      <p>
+        Užduoties metu rekomenduojama remtis
+        <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/"
+          >flexbox dokumentacija
+        </a>
+      </p>
+      <h1>Pirma užduotis</h1>
+      <p>
+        Sukonfiguruoti <code>.flex-1</code> ir
+        <code>.flex-1 > *</code> taisyklių blokus, kad žemiau esantys html
+        elementai būtų valdomi flexbox pagrindu.
+      </p>
+      <p>
+        Kiekvienoje eilutėje turi būti po du elementus, kurie kartu užima visą
+        eilutę. Tarp eilučių turi būti tarpai (5px).
+      </p>
+      <p>
+        Galutinis rezultatas turi atrodyti taip:<br />
+        <img src="assets/flex-1.png" alt="flex-1 pavyzdys" width="100%" />
+      </p>
+      <h3>Sprendimas:</h3>
+      <div class="flex-1">
+        <div class="ca-test-box"></div>
+        <div class="ca-test-box"></div>
+        <div class="ca-test-box"></div>
+        <div class="ca-test-box"></div>
+        <div class="ca-test-box"></div>
+        <div class="ca-test-box"></div>
+      </div>
+      <h1>Antra užduotis</h1>
+      <p>
+        Praeitoje užduotyje sukurtas taisykles papildyti, kad mobiliuose
+        ekranuose <code>(max-width: 768px)</code> spalvoti blokai apsikeistų
+        vietomis. T.y. kairėje pusėje būtų raudoni blokai, o dešinėje -
+        mėlyni.<br />
+        Pakeisti pačių spalvų nustatymų negalima.
+      </p>
+      <h3>Sprendimas:</h3>
+      <div class="flex-1">
+        <div class="ca-test-box"></div>
+        <div class="ca-test-box"></div>
+        <div class="ca-test-box"></div>
+        <div class="ca-test-box"></div>
+        <div class="ca-test-box"></div>
+        <div class="ca-test-box"></div>
+      </div>
+      <h1>Trečia užduotis</h1>
+      <p>
+        Konteinerį <code>.flex-3</code> paversti į vertikalų flexbox ir jo
+        elementus pagal jų tekstą surikiuoti horizontaliu atžvilgiu.
+      </p>
+      <h3>Sprendimas:</h3>
+      <div class="flex-3">
+        <p>Kairėje pusėje</p>
+        <p>Centre</p>
+        <p>Dešinėje pusėje</p>
+        <p>Centre</p>
+        <p>Kairėje pusėje</p>
+        <p>Centre</p>
+      </div>
+      <h1>Ketvirta užduotis</h1>
+      <p>
+        Visi elementai <code>.flex-4</code> viduje turi būti rikiuojami flexbox
+        pagalba. Antras ir penktas elementai turi išsiplėsti, kad užpildyti
+        laisvą vietą ekrane. Tarpusavyje jie turi turėti proporciją 1:2.
+      </p>
+      <p>
+        Galutinis rezultatas turi atrodyti taip:<br />
+        <img src="assets/flex-4.png" alt="flex-1 pavyzdys" width="100%" />
+      </p>
+      <h3>Sprendimas:</h3>
+      <div class="flex-4">
+        <div class="ca-test-box"></div>
+        <div class="ca-test-box"></div>
+        <div class="ca-test-box"></div>
+        <div class="ca-test-box"></div>
+        <div class="ca-test-box"></div>
+        <div class="ca-test-box"></div>
+      </div>
+      <h1>Penkta užduotis</h1>
+      <p>
+        Visi elementai <code>.flex-5</code> viduje turi būti rikiuojami flexbox
+        pagalba. Visas tekstas turi būti sulygiuotas nulūžtančioje eilutėje
+        taip, kad jo apačia prasidėtų tame pačiame lygyje kaip ir kaimyniame
+        elemente. Tarp teksto turi būti padorūs tarpai (10px).
+      </p>
+      <p>
+        Galutinis rezultatas turi atrodyti taip:<br />
+        <img src="assets/flex-5.png" alt="flex-1 pavyzdys" width="100%" />
+      </p>
+      <h3>Sprendimas:</h3>
+      <div class="flex-5">
+        <h1>Didelis tekstas</h1>
+        <p>Mažas tekstas</p>
+        <small>Labai mažas tekstas</small>
+        <blockquote>citata</blockquote>
+        <h4>Didokas tekstas</h4>
+        <i>Palenktas tekstas</i>
+        <code>Kodo pavyzdys</code>
+        <a href="#">Nuoroda į niekur</a>
+      </div>
+      <h1>Šešta užduotis</h1>
+      <p>
+        Visi elementai <code>.flex-6</code> viduje turi būti rikiuojami flexbox
+        pagalba. Neliečiant html struktūros surikiuoti elementus pagal išrašytą
+        tvarką.
+      </p>
+      <h3>Sprendimas:</h3>
+      <div class="flex-6">
+        <span>9</span>
+        <span>10</span>
+        <span>1</span>
+        <span>4</span>
+        <span>5</span>
+        <span>6</span>
+        <span>3</span>
+        <span>7</span>
+        <span>8</span>
+        <span>2</span>
+      </div>
+      <h1>Septinta užduotis</h1>
+      <p>
+        Susirasti 12 nuotraukų internete ir sukurti nuotraukų tinklelį flexbox
+        pagalba. Tai turi būti įgyvendinta <code>.flex-7</code> elemente.
+      </p>
+      <p>
+        Visos nuotraukos turi būti neišsikraipiusios ir atvaizduojamos vienodo
+        dydžio. Tarp nuotruakų horizontaliai turi būti 10px tarpai, o
+        vertikaliai - 20px.
+      </p>
+      <p>
+        Kiekvienoje eilutėje turi būti atvaizduojamos 4 nuotraukos.Tačiau, jei
+        ekrano dydis mažesnis nei 768px, kiekvienoje eilutėje turi būti 2
+        nuotraukos.
+      </p>
+      <h3>Sprendimas:</h3>
+      <div class="flex-7">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQk4YBximOPLz45nFxs635G9W6S340pXwxOIksLRvMCYmj6z4dGz3xv1rZkdiHJ_T0V7lM&usqp=CAU" alt="1">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2wHE4b8Gzp94j6WpN9YVuJtMY32R1YZ28V12AyFS52pHDFZDv6Wl24htWZCDG5puCb_U&usqp=CAU" alt="2">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzYUbQVUIYMsHflDdY-IQQ4szxHPrMQdfInjDP7DIK14VcS7VJP98UMgemtT5r0XOH5Js&usqp=CAU" alt="3">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDdfUNPAJiLMe_1begeAuQQiuhToGTVNG8sK0n_JyOBbGV6V5ueMBOhS7YEMiYc4uXsfk&usqp=CAU" alt="4">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQk23oDJiJAjP_nn4CZBbXvUY3WUs5P0oxSc0-5a690I1kuhwCqYKiG7ghZKgfeogOVZKc&usqp=CAU" alt="5">
+        <img src="https://st4.depositphotos.com/18442272/20399/i/600/depositphotos_203994494-stock-photo-leaf-bokeh-forest-missed-focus.jpg" alt="6">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQk4YBximOPLz45nFxs635G9W6S340pXwxOIksLRvMCYmj6z4dGz3xv1rZkdiHJ_T0V7lM&usqp=CAU" alt="7">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2wHE4b8Gzp94j6WpN9YVuJtMY32R1YZ28V12AyFS52pHDFZDv6Wl24htWZCDG5puCb_U&usqp=CAU" alt="8">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzYUbQVUIYMsHflDdY-IQQ4szxHPrMQdfInjDP7DIK14VcS7VJP98UMgemtT5r0XOH5Js&usqp=CAU" alt="9">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDdfUNPAJiLMe_1begeAuQQiuhToGTVNG8sK0n_JyOBbGV6V5ueMBOhS7YEMiYc4uXsfk&usqp=CAU" alt="10">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQk23oDJiJAjP_nn4CZBbXvUY3WUs5P0oxSc0-5a690I1kuhwCqYKiG7ghZKgfeogOVZKc&usqp=CAU" alt="11">
+        <img src="https://st4.depositphotos.com/18442272/20399/i/600/depositphotos_203994494-stock-photo-leaf-bokeh-forest-missed-focus.jpg" alt="12">
+      </div>
+    </main>
+  </body>
+</html>

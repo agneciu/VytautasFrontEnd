@@ -266,3 +266,18 @@ footer {
  padding-top: 52px;
  padding-bottom: 52px;
 }
+
+@media screen and (max-width:390px) {
+    body {
+        max-width: 390px;
+    }
+
+   .two-part-card, .three-part-card {
+    width: 100%;
+   }
+
+   .group-of-two {
+    flex-direction: column;
+   }
+   
+}
