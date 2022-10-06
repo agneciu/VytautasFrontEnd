@@ -1,33 +1,84 @@
-main {
+html,
+body {
+    height: 100%;
+}
+
+.layout {
     display: grid;
-    grid-template-rows: 100px 100px;
-    /* grid-auto-rows: 100px;  */
-    /* matavimas jei virsys eiluteciu skaiciu */
-    /* neveikia auto-rows nes neleidziam pildyti rows su grid-auto-flow*/
-    grid-template-columns: 120px 120px 120px;
-    /* grid-auto-columns: 120px; */
-    /* grid-auto-flow: column; */
-    gap:10px;
-    grid-auto-flow: row;
+    grid-template-areas: 
+    "navigation header"
+    "navigation h-content";
+    grid-template-columns: 246px auto;
+    grid-template-rows: 186px auto;
+    height: 100%;
+}
+
+.navigation {
+    grid-area: navigation;
+    display:flex;
+    flex-direction:column;
+    padding:40px 26px;
     
-    grid-auto-columns: 120px;
-    grid-auto-rows:100px;
-
-    /* overflow taisykles */
-    /* width: 100%;
-    overflow-x: scroll; */
 }
 
-main > * {
-    background-color: rgb(94, 75, 50);
-    min-height: 20px;
+.navigation__link {
+    height: 46px;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: rgba(77, 77, 77,1);
+    padding: 0px 18px;
 }
 
-p {
-    background-color: red;
+.link--active {
+    border-radius: 10px;
+    background-color: rgba (27, 89, 248, 0.1);
+    color: blue;
 }
 
-.first {
-    grid-column: span 2;
-    grid-row: span 2;
+.link--active img {
+    background-color: blue;
+}
+
+.navigation__links-list {
+    flex:1;
+    margin-top: 46px;
+}
+
+.navigation__links-list a span {
+    margin-left: 18px; 
+ 
+}
+
+/* .navigation__link div {
+    mask: url(images/Path.svg);
+    -webkit-mask:url(images/Path.svg);
+    width: 21px;
+    height: 12px;
+    background-color: blueviolet;
+} */
+
+.header {
+    grid-area: header;
+    background-color: rgb(240, 195, 140);
+}
+
+.content{
+    grid-area: h-content;
+    background-color: rgb(108, 108, 165);
+}
+
+@media screen and (max-width:768px) {
+    .header {
+        display:none;
+    }
+
+    .layout {
+        grid-template-areas:
+        "navigation"
+        "h-content";
+        grid-template-columns: auto;
+        grid-template-rows: 114px auto;
+        
+    }
 }
