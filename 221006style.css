@@ -1,0 +1,33 @@
+main {
+    display: grid;
+    grid-template-rows: 100px 100px;
+    /* grid-auto-rows: 100px;  */
+    /* matavimas jei virsys eiluteciu skaiciu */
+    /* neveikia auto-rows nes neleidziam pildyti rows su grid-auto-flow*/
+    grid-template-columns: 120px 120px 120px;
+    /* grid-auto-columns: 120px; */
+    /* grid-auto-flow: column; */
+    gap:10px;
+    grid-auto-flow: row;
+    
+    grid-auto-columns: 120px;
+    grid-auto-rows:100px;
+
+    /* overflow taisykles */
+    /* width: 100%;
+    overflow-x: scroll; */
+}
+
+main > * {
+    background-color: rgb(94, 75, 50);
+    min-height: 20px;
+}
+
+p {
+    background-color: red;
+}
+
+.first {
+    grid-column: span 2;
+    grid-row: span 2;
+}
