@@ -1,6 +1,9 @@
 html,
 body {
     height: 100%;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    line-height: 120%;
 }
 
 .layout {
@@ -18,49 +21,107 @@ body {
     display:flex;
     flex-direction:column;
     padding:40px 26px;
+    gap:46px;
     
 }
 
 .navigation__link {
     height: 46px;
     display: flex;
-    justify-content: center;
+    justify-content: start;
+    align-items: center;
     text-decoration: none;
     color: rgba(77, 77, 77,1);
     padding: 0px 18px;
+    line-height: 120%;
 }
+
+.navigation__link img {
+    width: 22px;
+    height: 12px;
+    object-fit: scale-down;
+}
+
 
 .link--active {
     border-radius: 10px;
-    background-color: rgba (27, 89, 248, 0.1);
-    color: blue;
+    background-color: rgb(27, 89, 248, 0.1);
+    color: rgb(27, 89, 248, 1);
 }
 
-.link--active img {
-    background-color: blue;
+.link--active-image {
+    width: 22px;
+    height: 22px;
+    background-color: rgb(27, 89, 248, 1);
+}
+
+.navigation__link-image {
+    width: 22px;
+    height: 22px;
+    background-color: #4D4D4D;
+
+}
+
+.navigation__link-image-arrow {
+    mask: url(images/Lightning.svg) no-repeat 0 0/contain;
+    -webkit-mask: url(images/Lightning.svg)no-repeat 0 0/contain;
+
 }
 
 .navigation__links-list {
     flex:1;
-    margin-top: 46px;
+    /* margin-top: 46px; */
 }
 
 .navigation__links-list a span {
     margin-left: 18px; 
- 
+}
+
+.nav__heading {
+    color: #00000080;
+    font-weight: 600;
+
+}
+
+.navigation__links-list .nav__heading {
+    margin-top: 58px;
+    margin-bottom: 16px;
+    margin-left: 18px;
+    margin-right: 0px;
+}
+
+.navigation__account {
+    border-top: 1px solid #E5E5E5;
+    padding-top: 32px;
+    padding-left: 18px;
+    padding-right: 0px;
+}
+
+.navigation__account h5 {
+    color: #000000;
+    font-size: 14px;
+    line-height: 120%;
+    margin-top: 9px;
+    margin-bottom: 0px;
+}
+
+.navigation__account p {
+    color: #00000080;
+    line-height: 120%;
+    margin-top: 0px;
+
 }
 
 /* .navigation__link div {
-    mask: url(images/Path.svg);
-    -webkit-mask:url(images/Path.svg);
+    mask: url(images/Lightning.svg) no-repeat 0 0/contain;
+    -webkit-mask: url(images/Lightning.svg)no-repeat 0 0/contain;
     width: 21px;
     height: 12px;
-    background-color: blueviolet;
+    background-color: rgb(27, 89, 248, 1);
 } */
 
 .header {
     grid-area: header;
-    background-color: rgb(240, 195, 140);
 }
 
 .content{
