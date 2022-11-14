@@ -1,0 +1,7 @@
+.test-h-500 {
+    height: 400px;
+}
+
+.test-img-fit {
+    object-fit: cover;
+}
