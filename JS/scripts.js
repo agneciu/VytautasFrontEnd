@@ -197,8 +197,7 @@ visais kitais atvejais galime rasyti "else";
 // } else {
 //   alert("Extreme Obesity");
 // }
- //-------
-
+//-------
 
 /*
 Sukurti BMR kalkuliatorių
@@ -255,35 +254,37 @@ If you are extra active (very hard exercise/sports & a physical job): calories =
 
 //-----------
 
-const answer1 = prompt("Definite budget? (y/n)");
-const answer2 = prompt("Known champion for it? (y/n)");
-const answer3 = prompt("Clear project scope? (y/n)");
-const answer4 = prompt("Achievable Timescale? (y/n)");
-const answer5 = prompt("Alternative funding? (y/n)");
-const answer6 = prompt("Happy to profit? (y/n)");
+const budget = prompt("Definite budget? (y/n)");
+const champion = prompt("Known champion for it? (y/n)");
+const scope = prompt("Clear project scope? (y/n)");
+const timescale = prompt("Achievable Timescale? (y/n)");
+const funding = prompt("Alternative funding? (y/n)");
+const profit = prompt("Happy to profit? (y/n)");
 
-if (answer1 === "y") {
-    if (answer2 === "y") {
-        if (answer3 === "y"){
-            if (answer4 === "y") {
-                alert("Go for it");
-            } else {
-                alert("Get more time");
-            }
-        } else {
-            if (answer5 === "y") {
-                alert("Cash it");
-            } else {
-                alert("Explain how it matters");
-            }
-        }
+if (budget === "y") {
+  //yes
+  if (champion === "y") {
+    if (scope === "y") {
+      if (timescale === "y") {
+        alert("Go for it");
+      } else {
+        alert("Get more time");
+      }
     } else {
-        alert("Leave it alone");
+      if (profit === "y") {
+        alert("Cash it in");
+      } else {
+        alert("Explain why it matters");
+      }
     }
+  } else {
+    alert("Leave it alone");
+  }
 } else {
-    if (answer5 === "y") {
-        alert("Sort out funding");
-    } else {
-        alert("Leave it alone");
-    }
+  //no
+  if (funding === "y") {
+    alert("Sort out funding");
+  } else {
+    alert("Leave it alone");
+  }
 }
