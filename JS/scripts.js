@@ -253,38 +253,121 @@ If you are extra active (very hard exercise/sports & a physical job): calories =
 // }
 
 //-----------
+// 
 
-const budget = prompt("Definite budget? (y/n)");
-const champion = prompt("Known champion for it? (y/n)");
-const scope = prompt("Clear project scope? (y/n)");
-const timescale = prompt("Achievable Timescale? (y/n)");
-const funding = prompt("Alternative funding? (y/n)");
-const profit = prompt("Happy to profit? (y/n)");
+// const cssSelector = "#some-element";
+// const element = document.querySelector(cssSelector);
 
-if (budget === "y") {
-  //yes
-  if (champion === "y") {
-    if (scope === "y") {
-      if (timescale === "y") {
-        alert("Go for it");
-      } else {
-        alert("Get more time");
-      }
+// element.className = "element-style";
+// element.className += "active";
+// console.log(element.className);
+
+//----
+
+// const heading = document.querySelector("#my-element > h1");
+// const text = document.querySelector("#my-element > p");
+
+// console.log(text);
+
+//-----
+
+// const heading = document.querySelector("#my-element h1");
+
+// //heading.className stringas su klasem
+// // heading.innerText stringas su tekstu tarp <el> </el>
+// let text = heading.innerText;
+// heading.innerText = "Labas vakaras";
+// console.log(heading.innerText);
+// //-----
+
+// if (true) {
+//     console.log("true");
+// }
+
+// //deklaracija
+// function myFunction() {
+//     console.log("helloFunction");
+// }
+// console.log("1");
+
+// //panaudojimas
+// myFunction(); //funkcija veikia tik iskvieciama
+// console.log("2");
+
+// myFunction();
+// myFunction();
+// myFunction();
+
+//---- BUTTON WITH CLICKS
+// const button = document.querySelector("#my-button");
+
+// let i = 0;
+
+// function myFunction() {
+//     i++;
+//     button.innerText = i;   
+// }
+
+//-----DROPDOWN BUTTON
+
+// const DROPDOWN_ACTIVE = "dropdown-menu active";
+// const DROPDOWN_HIDDEN = "dropdown-menu";
+
+// const dropdownElement = document.querySelector(`#dropdown .${DROPDOWN_HIDDEN}`);
+
+// function toggle() {
+//     if (dropdownElement.className === DROPDOWN_ACTIVE) {
+
+//     } else {
+//     dropdownElement.className === DROPDOWN_HIDDEN;
+//     }
+//  }
+
+//-----
+
+// const DROPDOWN_ACTIVE = "accordeon-content active";
+// const DROPDOWN_HIDDEN = "accordeon-content";
+
+// const dropdownElement = document.querySelector(`#accordeon .${DROPDOWN_HIDDEN}`);
+
+// function appear() {
+//     if (dropdownElement.className === DROPDOWN_ACTIVE) {
+
+//     } else {
+//         dropdownElement.className === DROPDOWN_HIDDEN;
+//     }
+// }
+
+// appear();
+
+//nerodom accordeo-content turinio
+//paspaudus ant "accordeon-header" turi pasimatyti musu "accordeon-content"
+
+// const ACCORDEON = "accordeon-content";
+// const ACCORDEON_HIDDEN = "accordeon-content hidden";
+
+// const accordeonContentElement = document.querySelector("#accordeon .accordeon-content");
+
+// function appear() {
+//     const isAccordeonContentHidden =
+//         accordeonContentElement.className === ACCORDEON_HIDDEN;
+//     if (isAccordeonContentHidden) {
+//         accordeonContentElement.className === ACCORDEON;
+//     } else {
+//         accordeonContentElement.className === ACCORDEON_HIDDEN;
+//     }
+// }--- BURGER REPEAT
+
+const DROPDOWN_ACTIVE = "dropdown-menu active";
+const DROPDOWN_HIDDEN = "dropdown-menu";
+
+const dropdownElement = document.querySelector(`#dropdown .${DROPDOWN_HIDDEN}`);
+
+function toggle() {
+    if (dropdownElement.className === DROPDOWN_ACTIVE){
+        dropdownElement.className = DROPDOWN_HIDDEN;
     } else {
-      if (profit === "y") {
-        alert("Cash it in");
-      } else {
-        alert("Explain why it matters");
-      }
+        dropdownElement.className = DROPDOWN_ACTIVE;
     }
-  } else {
-    alert("Leave it alone");
-  }
-} else {
-  //no
-  if (funding === "y") {
-    alert("Sort out funding");
-  } else {
-    alert("Leave it alone");
-  }
+    
 }
