@@ -1,0 +1,57 @@
+/* #dropdown {
+    position: relative;
+}
+
+.dropdown-menu{
+    position: absolute;
+    top: calc(100% + 10px);
+    left:0;
+    background-color: grey;
+    border-radius: 5px;
+    padding: 10px;
+    display: none;
+}
+
+.dropdown-menu.active {
+    display: block;
+}
+
+/* .accordeon-content.hidden {
+    display: none;
+} */ 
+
+/*CHANGING MODES*/
+
+/* :root {
+    --modeColor: #1e90ff; 
+    --spaceSmall: 0.375rem;
+    --spaceBig: 1rem;
+} */
+
+/*Kad galetume naudoti var, elementas turi buti vaikas to elemento, kuriame aprasyti kintamieji*/
+
+/* .test {
+    color: var(--modeColor);
+}
+
+.test3 {
+    background-color: var(--modeColor);
+}
+
+body.light {
+    --color: #000;
+    --bgColor: #fff;
+    background-color: #fff;
+}
+
+body.dark {
+    --color:#fff;
+    --bgColor:#000;
+    background-color: #000;
+}
+
+p {
+    color: var(--color);
+    background-color: var(--bgColor);
+} */
+
