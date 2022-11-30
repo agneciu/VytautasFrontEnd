@@ -253,7 +253,7 @@ If you are extra active (very hard exercise/sports & a physical job): calories =
 // }
 
 //-----------
-// 
+//
 
 // const cssSelector = "#some-element";
 // const element = document.querySelector(cssSelector);
@@ -305,7 +305,7 @@ If you are extra active (very hard exercise/sports & a physical job): calories =
 
 // function myFunction() {
 //     i++;
-//     button.innerText = i;   
+//     button.innerText = i;
 // }
 
 //-----DROPDOWN BUTTON
@@ -369,7 +369,7 @@ If you are extra active (very hard exercise/sports & a physical job): calories =
 //     } else {
 //         dropdownElement.className = DROPDOWN_ACTIVE;
 //     }
-    
+
 // }
 //----
 // console.log - debugging
@@ -399,9 +399,8 @@ If you are extra active (very hard exercise/sports & a physical job): calories =
 //         bodyElement.className = "dark";
 //     } else {
 //         bodyElement.className = "light";
-//     } 
+//     }
 // }
-
 
 //1. salyga - jeigu sviesus fonas, tada fonas pasikeicia i tamsu;
 // sviesus fonas yra class="light"
@@ -445,53 +444,163 @@ idx >= 40.0 - "Obese"
 
 */
 
-console.log("labukas");
+// console.log("labukas");
 
-const heightInput = document.querySelector("#height");
-const weightInput = document.querySelector("#weight");
+// const heightInput = document.querySelector("#height");
+// const weightInput = document.querySelector("#weight");
 
-const heightError = document.querySelector("#height-error");
-const weightError = document.querySelector("#weight-error");
+// const heightError = document.querySelector("#height-error");
+// const weightError = document.querySelector("#weight-error");
 
-const result = document.querySelector("#result");
+// const result = document.querySelector("#result");
 
-console.log(heightInput, weightInput, heightError, weightError, result);
+// console.log(heightInput, weightInput, heightError, weightError, result);
 
-function calcBMI() {
-    cleanupResults();
-    const heightCm = Number(heightInput.value);
-    const weightKg = Number(weightInput.value);
+// function calcBMI() {
+//     cleanupResults();
+//     const heightCm = Number(heightInput.value);
+//     const weightKg = Number(weightInput.value);
 
-    const isHeightValid = heightCm > 0;
-    const isWeightValid = weightKg > 0;
+//     const isHeightValid = heightCm > 0;
+//     const isWeightValid = weightKg > 0;
 
-    if (isHeightValid) {
-        if(isWeightValid) {
-            const BMI = (weightKg / heightCm / heightCm) * 10_000;
-            result.innerText = BMI;
-            heightInput.value = "";
-            weightInput.value = "";
-        } else {
-            showWeightError();
-        } 
-    } else {
-        showHeightError();
-        if (!isWeightValid) {
-            showWeightError();
-        }
-    }   
-}
+//     if (isHeightValid) {
+//         if(isWeightValid) {
+//             const BMI = (weightKg / heightCm / heightCm) * 10_000;
+//             result.innerText = BMI;
+//             heightInput.value = "";
+//             weightInput.value = "";
+//         } else {
+//             showWeightError();
+//         }
+//     } else {
+//         showHeightError();
+//         if (!isWeightValid) {
+//             showWeightError();
+//         }
+//     }
+// }
 
-function cleanupResults() {
-    heightError.innerText = "";
-    weightError.innerText = "";
-    result.innerText = "";
-}
+// function cleanupResults() {
+//     heightError.innerText = "";
+//     weightError.innerText = "";
+//     result.innerText = "";
+// }
 
-function showHeightError() {
-    heightError.innerText = "Error";
-}
+// function showHeightError() {
+//     heightError.innerText = "Error";
+// }
 
-function showWeightError() {
-    weightError.innerText = "Error";
+// function showWeightError() {
+//     weightError.innerText = "Error";
+// }
+//-------
+
+// if (isHeightValid) {
+//     if (isWeughtValid) {
+//         //A.
+//         //musu success path
+//     } else {
+//         // svoris nevalidus
+//     }
+// } else {
+//     //aukstis nevalidus
+//     if (!isWeightValid) {
+//         //svoris nevalidus
+//     }
+// }
+
+// Kad naudotis IR (&&)Coperatoriumi abi salygos privalo buti igyventos.
+// if (isHeightValid && isWeightValid) {
+//     // A.
+//     console.log(true && true);
+// } else {
+//     if (!isHeightValid) {
+//         // Neteisingas svoris.
+//     }
+//     if (!isWeightValid) {
+//         //Netesingas aukstis.
+//     }
+// }
+
+// Jei bent viena salyga bus igyvendintas, jis veiks
+// if (!isHeightValid || !isWeightValid) {
+//     if (!isHeightValid) {
+//         // Neteisingas svoris.
+//     }
+//     if (!isHeightValid) {
+//         // Neteisingas svoris.
+//     }
+// } else {
+//     //Success path
+//     console.log(true && true);
+// }
+
+// !isHeightValid || !isWeightValid yra priesingos isHeightValid && isWeightValid
+
+// 2 operatoriai:
+//and - &&      IR
+//or - ||     ARBA
+
+//2. Sukurti BMR kalkuliatoriųFor men: BMR = 66.5 + (13.75 * weight in kg) + (5.003 * height in cm) - (6.75 * age)
+//For women: BMR = 655.1 + (9.563 * weight in kg) + (1.850 * height in cm) - (4.676 * age)
+//To determine your total daily calorie needs, multiply your BMR by the appropriate activity factor, as follows:
+//Sedentary (little or no exercise):
+// calories = BMR × 1.2;Lightly active (light exercise/sports 1-3 days/week): calories = BMR × 1.375;Moderately active (moderate exercise/sports 3-5 days/week): calories = BMR × 1.55;Very active (hard exercise/sports 6-7 days a week): calories = BMR × 1.725;
+//andIf you are extra active (very hard exercise/sports & a physical job): calories = BMR × 1.9.// suvedami atsakymai ar esam vyras/moteris, svoris aukštis ir amžius.// atsakomas koks mūsų aktyvumo lygis// atsakomas kiek kalorijų mums reikia per dieną
+
+function calcBMR() {
+  //reikia duomenu ugis,svoris, metai,lytis, aktyvumas
+  //reikia pasiimti inputus ir issaugoti juos kaip kintamuosius
+  const heightEl = document.querySelector("#height");
+  console.log(heightEl);
+
+  const weightEl = document.querySelector("#weight");
+  console.log(weightEl);
+
+  const ageEl = document.querySelector("#age");
+  console.log(ageEl);
+
+  const height = Number(heightEl.value);
+  console.log(height);
+
+  const weight = Number(weightEl.value);
+  console.log(weight);
+
+  const age = Number(ageEl.value);
+  console.log(age);
+
+  //  console.log(document.querySelector('input[name="gender"]:checked'));
+
+  //  const gender = document.querySelector('input[name="gender"]:checked').value;
+
+  const genderEl = document.querySelector('input[name="gender"]:checked');
+
+  let gender;
+
+  if (genderEl) {
+    // alert("error");
+    const gender = genderEl.value;
+    console.log(gender);
+  }
+
+  const activityEl = document.querySelector('input[name="activity"]:checked');
+
+  let activity;
+
+  if (activityEl) {
+    // alert("error");
+    const activity = activityEl.value;
+    console.log(activity);
+  }
+
+  const isHeightValid = height > 0;
+  const isWeightValid = weight > 0;
+  const isAgeValid = age > 0;
+  const isGenderValid = "man" === gender || "female" === gender;
+  console.log(isGenderValid);
+
+  const isActivityValid = "sedentary" === activity || "light" === activity || "moderately" === activity || "very" === activity || "extra" === activity;
+  console.log(isActivityValid);
+
 }
