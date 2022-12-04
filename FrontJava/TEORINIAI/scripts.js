@@ -549,58 +549,231 @@ idx >= 40.0 - "Obese"
 // calories = BMR × 1.2;Lightly active (light exercise/sports 1-3 days/week): calories = BMR × 1.375;Moderately active (moderate exercise/sports 3-5 days/week): calories = BMR × 1.55;Very active (hard exercise/sports 6-7 days a week): calories = BMR × 1.725;
 //andIf you are extra active (very hard exercise/sports & a physical job): calories = BMR × 1.9.// suvedami atsakymai ar esam vyras/moteris, svoris aukštis ir amžius.// atsakomas koks mūsų aktyvumo lygis// atsakomas kiek kalorijų mums reikia per dieną
 
-function calcBMR() {
-  //reikia duomenu ugis,svoris, metai,lytis, aktyvumas
-  //reikia pasiimti inputus ir issaugoti juos kaip kintamuosius
-  const heightEl = document.querySelector("#height");
-  console.log(heightEl);
+// function calcBMR() {
+//   //reikia duomenu ugis,svoris, metai,lytis, aktyvumas
+//   //reikia pasiimti inputus ir issaugoti juos kaip kintamuosius
+//   const heightEl = document.querySelector("#height");
+//   console.log(heightEl);
 
-  const weightEl = document.querySelector("#weight");
-  console.log(weightEl);
+//   const weightEl = document.querySelector("#weight");
+//   console.log(weightEl);
 
-  const ageEl = document.querySelector("#age");
-  console.log(ageEl);
+//   const ageEl = document.querySelector("#age");
+//   console.log(ageEl);
 
-  const height = Number(heightEl.value);
-  console.log(height);
+//   const height = Number(heightEl.value);
+//   console.log(height);
 
-  const weight = Number(weightEl.value);
-  console.log(weight);
+//   const weight = Number(weightEl.value);
+//   console.log(weight);
 
-  const age = Number(ageEl.value);
-  console.log(age);
+//   const age = Number(ageEl.value);
+//   console.log(age);
 
-  //  console.log(document.querySelector('input[name="gender"]:checked'));
+//   //  console.log(document.querySelector('input[name="gender"]:checked'));
 
-  //  const gender = document.querySelector('input[name="gender"]:checked').value;
+//   //  const gender = document.querySelector('input[name="gender"]:checked').value;
 
-  const genderEl = document.querySelector('input[name="gender"]:checked');
+//   const genderEl = document.querySelector('input[name="gender"]:checked');
 
-  let gender;
+//   let gender;
 
-  if (genderEl) {
-    // alert("error");
-    const gender = genderEl.value;
-    console.log(gender);
+//   if (genderEl) {
+//     // alert("error");
+//     const gender = genderEl.value;
+//     console.log(gender);
+//   }
+
+//   const activityEl = document.querySelector('input[name="activity"]:checked');
+
+//   let activity;
+
+//   if (activityEl) {
+//     // alert("error");
+//     const activity = activityEl.value;
+//     console.log(activity);
+//   }
+
+//   const isHeightValid = height > 0;
+//   const isWeightValid = weight > 0;
+//   const isAgeValid = age > 0;
+//   const isGenderValid = "man" === gender || "female" === gender;
+//   console.log(isGenderValid);
+
+//   const isActivityValid = "sedentary" === activity || "light" === activity || "moderately" === activity || "very" === activity || "extra" === activity;
+//   console.log(isActivityValid);
+
+// }
+//-----CALCULATOR
+
+// 1. Kažkoks "display"
+// 2. Yra 2 rūšių mygtukai: skaičiai ir operatoriai
+/**
+ *
+ * 1. Vartotojas įveda skaičių
+ *
+ * 2. (optional) Vartotojas gali įvesti ir antrą ir trečią skaičių,
+ * jie bus sudedami kaip stringai.
+ * T.y. paspaudus "2" ir "5" ir "9" gausime "259".
+ *
+ * 3. Vartotojas paspaudžia operatorių ir kažkur išsaugoma vertė,
+ * o "display" įvestas skaičius neberodomas.
+ *
+ * 4. Įvedamas kitas skaičius, gali būti daugiau negu vienas,
+ * t.y. panašiai kaip antram žingsnyje.
+ *
+ * 5. Paspaudžiama lygu, kažkur išsaugoma antroji vertė,
+ * įvyksta skaičiavimas ir ir rezultatas parodomas "display" vietoje antrosios įvesties.
+ *
+ *
+ * Užduotis: Darom vieną skaičiaus mygtuką, pvz.: 2, daugybos operatorių ir lygu.
+ *
+ */
+
+const displayEl = document.querySelector("#display");
+console.log(displayEl);
+let temporaryValue;
+let operationType;
+
+function call1() {
+  const value = 1;
+  displayEl.innerText += value;
+  // console.log(displayEl.innerText);
+}
+
+function call2() {
+  const value = 2;
+  displayEl.innerText += value;
+  // console.log(displayEl.innerText);
+}
+
+function call3() {
+  const value = 3;
+  displayEl.innerText += value;
+  // console.log(displayEl.innerText);
+}
+
+function call4() {
+  const value = 4;
+  displayEl.innerText += value;
+  // console.log(displayEl.innerText);
+}
+
+function call5() {
+  const value = 5;
+  displayEl.innerText += value;
+  // console.log(displayEl.innerText);
+}
+
+function call6() {
+  const value = 6;
+  displayEl.innerText += value;
+  // console.log(displayEl.innerText);
+}
+
+function call7() {
+  const value = 7;
+  displayEl.innerText += value;
+  // console.log(displayEl.innerText);
+}
+
+function call8() {
+  const value = 8;
+  displayEl.innerText += value;
+  // console.log(displayEl.innerText);
+}
+
+function call9() {
+  const value = 9;
+  displayEl.innerText += value;
+  // console.log(displayEl.innerText);
+}
+
+function call0() {
+  const value = 0;
+  displayEl.innerText += value;
+  // console.log(displayEl.innerText);
+}
+
+function saveValue() {
+  if (
+    typeof temporaryValue === "number" &&
+    typeof operationType !== "undefined"
+  ) {
+    let result;
+
+    if (operationType === "multiply") {
+      result = temporaryValue * Number(displayEl.innerText);
+      console.log(result);
+    } else if (operationType === "devide") {
+      result = temporaryValue / Number(displayEl.innerText);
+      console.log(displayEl.innerText, temporaryValue);
+    } else if (operationType === "add") {
+      result = temporaryValue + Number(displayEl.innerText);
+      console.log(displayEl.innerText, temporaryValue);
+    } else if (operationType === "subtract") {
+      result = temporaryValue - Number(displayEl.innerText);
+      console.log(displayEl.innerText, temporaryValue);
+    }
+    displayEl.innerText = result;
   }
+}
 
-  const activityEl = document.querySelector('input[name="activity"]:checked');
+function multiply() {
+  saveValue() ;
+  temporaryValue = Number(displayEl.innerText);
+  // console.log(temporaryValue);
+  
+}
+displayEl.innerText = "";
+  operationType = "multiply";
+}
 
-  let activity;
+function devide() {
+  saveValue() ;
+  // console.log(temporaryValue);
+  displayEl.innerText = "";
+  operationType = "devide";
+}
 
-  if (activityEl) {
-    // alert("error");
-    const activity = activityEl.value;
-    console.log(activity);
+function add() {
+  saveValue() ;
+  // console.log(temporaryValue);
+  displayEl.innerText = "";
+  operationType = "add";
+}
+
+function subtract() {
+  saveValue() ;
+  // console.log(temporaryValue);
+  displayEl.innerText = "";
+  operationType = "subtract";
+}
+
+function calculateResult() {
+  let result;
+  if (operationType === "multiply") {
+    result = temporaryValue * Number(displayEl.innerText);
+    console.log(result);
+  } else if (operationType === "devide") {
+    result = temporaryValue / Number(displayEl.innerText);
+    console.log(displayEl.innerText, temporaryValue);
+  } else if (operationType === "add") {
+    result = temporaryValue + Number(displayEl.innerText);
+    console.log(displayEl.innerText, temporaryValue);
+  } else if (operationType === "subtract") {
+    result = temporaryValue - Number(displayEl.innerText);
+    console.log(displayEl.innerText, temporaryValue);
   }
+  displayEl.innerText = result;
 
-  const isHeightValid = height > 0;
-  const isWeightValid = weight > 0;
-  const isAgeValid = age > 0;
-  const isGenderValid = "man" === gender || "female" === gender;
-  console.log(isGenderValid);
+  displayEl.innerText = "";
+  temporaryValue = undefined;
+  operationValue = undefined;
+}
 
-  const isActivityValid = "sedentary" === activity || "light" === activity || "moderately" === activity || "very" === activity || "extra" === activity;
-  console.log(isActivityValid);
-
+function clearResult() {
+  displayEl.innerText = "";
+  temporaryValue = undefined;
+  operationValue = undefined;
 }

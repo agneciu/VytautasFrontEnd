@@ -55,3 +55,30 @@ p {
     background-color: var(--bgColor);
 } */
 
+.display {
+border: 2px solid black;
+min-height: 40px;
+}
+
+.conteiner {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.controls {
+    display: flex;
+    gap:10px;
+}
+
+.numbers {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap:10px;
+    flex-grow: 1;
+}
+
+.operators {
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
