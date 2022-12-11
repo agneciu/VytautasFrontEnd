@@ -19,6 +19,7 @@ function calcBMR() {
   
     const age = Number(ageEl.value);
     console.log(age);
+
   
     //  console.log(document.querySelector('input[name="gender"]:checked'));
   
@@ -53,4 +54,10 @@ function calcBMR() {
     const isActivityValid = "sedentary" === activity || "light" === activity || "moderately" === activity || "very" === activity || "extra" === activity;
     console.log(isActivityValid);
   
+    if (isWeightValid && isHeightValid && isAgeValid && isGenderValid && isActivityValid) {
+      if (gender === "man") {
+        const BMR = 66.5 + 66.5 + (13.75 * weight) + (5.003 * height) - (6.75 * age);
+    } else {
+      const BMR 
+    }
   }

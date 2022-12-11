@@ -1,0 +1,81 @@
+body {
+  font-family: "Courier New", Courier, monospace;
+  background-color: beige;
+}
+
+.audit-form > p {
+  margin: 0;
+  padding: 2px;
+}
+
+#container {
+  background-color: aliceblue;
+  padding: 25px 20px 40px 20px;
+  border: 1px solid black;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 50px;
+  right: 10px;
+}
+
+#fname,
+#lname,
+#email,
+#complaint {
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.form-text {
+  font-size: 10px;
+}
+
+.close-btn {
+  border: none;
+  background-color: transparent;
+  display: flex;
+  justify-content: end;
+  cursor: pointer;
+}
+
+.submit-btn {
+  background-color: rgb(113, 113, 235);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  padding: 5px;
+  font-family: "Courier New", Courier, monospace;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.help-btn {
+  background-color: rgb(113, 113, 235);
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px 5px 10px;
+  font-family: "Courier New", Courier, monospace;
+  width: 60px;
+  cursor: pointer;
+  position: absolute;
+  bottom: 15px;
+  right: 10px;
+}
+
+#complaint {
+  resize: none;
+  height: 80px;
+}
+
+.invisible {
+    visibility:hidden;
+}
+
+.visible {
+    display: block;
+}

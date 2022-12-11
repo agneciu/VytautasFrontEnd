@@ -461,8 +461,8 @@ idx >= 40.0 - "Obese"
 //     const heightCm = Number(heightInput.value);
 //     const weightKg = Number(weightInput.value);
 
-//     const isHeightValid = heightCm > 0;
-//     const isWeightValid = weightKg > 0;
+    // const isHeightValid = heightCm > 0;
+    // const isWeightValid = weightKg > 0;
 
 //     if (isHeightValid) {
 //         if(isWeightValid) {
@@ -727,7 +727,7 @@ function multiply() {
 }
 displayEl.innerText = "";
   operationType = "multiply";
-}
+
 
 function devide() {
   saveValue() ;
