@@ -34,11 +34,25 @@ const firstNameInp = document.querySelector("#fname");
 const lastNameInp = document.querySelector("#lname");
 const emailInp = document.querySelector("#email");
 const complaintInp = document.querySelector("#complaint");
-const firstNameEl = document.querySelector("#fm1");
+
+const nameReceived = document.querySelector("#received-name");
+const lastnameReceived = document.querySelector("#received-lastname");
+const emailReceived = document.querySelector("#received-email");
+const complaintReceived = document.querySelector("#received-complaint");
+const complaintDate = document.querySelector("#complaint-date");
 
 function isInputValid() {
-    
-}
+    const firstName = firstNameInp.value;
+    const lastName = lastNameInp.value;
+    const email = emailInp.value;
+    const complaint = complaintDate.value;
+
+if (firstName && lastName && email && complaint) {
+    return true;
+} else {
+    return false;
+} }
+
 
 
 function submitData() {

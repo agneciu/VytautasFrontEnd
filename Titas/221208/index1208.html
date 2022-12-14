@@ -14,11 +14,11 @@
     <p class="input-value">la la la</p> -->
 
     <div class="audit-form">
-      <p id="fm1">First Name:</p>
-      <p>Last Name:</p>
-      <p>Email address:</p>
-      <p>Complaint:</p>
-      <p>Date of complaint:</p>
+      <p id="received-name">First Name:</p>
+      <p id="received-lastname">Last Name:</p>
+      <p id="received-email">Email address:</p>
+      <p id="received-complaint">Complaint:</p>
+      <p id="complaint-date">Date of complaint:</p>
     </div>
 
     <div class="whole-container">
@@ -33,15 +33,19 @@
             </p>
             <label for="fname">First Name:</label> <br />
             <input type="text" id="fname" name="fname" /> <br />
+            <p id="fname-error"></p>
 
             <label for="lname">Last Name:</label> <br />
             <input type="text" id="lname" name="lname" /> <br />
+            <p id="lname-error"></p>
 
             <label for="email">E-mail:</label> <br />
             <input type="email" id="email" name="email" /> <br />
+            <p id="email-error"></p>
 
             <label for="complaint">Complaint:</label> <br />
             <textarea name="complaint" id="complaint"></textarea> <br />
+            <p id="complaint-error"></p>
 
             <button type="submit" class="submit-btn">Submit</button>
             </form>
