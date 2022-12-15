@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <header id="header">
+      <h1>Budget Tracker</h1>
+    </header>
+    <main>
+        
+      <div id="sel-container">
+        <select name="budget" id="main-dropdow">
+          <option value="addExpense" id="add-expense">Add Expense</option>
+          <option value="currentBudget" id="current-budget">
+            Current Budget
+          </option>
+        </select>
+      </div>
+
+      <div id="table-container">
+
+        <div id="expense-container">
+          
+            <label for="todayDate">Date:</label><br />
+            <input type="date" name="todayDate" id="calendar" /><br />
+
+            <label for="spentAmmount">Spent Ammount:</label> <br />
+            <input type="number" name="spentAmmount" id="spent-ammount" />
+            <br />
+
+            <label for="expenseType">Expense Type:</label> <br />
+            <select name="expenseType" id="expense-type">
+              <option value="groceries" id="groceries">Groceries</option>
+              <option value="utilities" id="utilities">Utilities</option>
+              <option value="car" id="car">Car</option>
+              <option value="Leisure" id="leisure">Leisure</option>
+              <option value="Clothing" id="clothing">Clothing</option>
+            </select>
+            <br/>
+
+            <label for="notes">Notes:</label><br />
+            <textarea name="notes" id="notes"></textarea> <br />
+
+            <button id="save-btn">Save Expense</button>
+         
+        </div>
+
+        <div id="budget-container">
+          
+            <label for="budget">Budget:</label><br />
+            <input type="number" name="budget" id="budget"/> <br/>
+
+            <button id="submit-btn">Submit Budget</button>
+          
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,81 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Courier New", Courier, monospace;
+  background-color: beige;
+}
+
+header {
+  background-color: rgb(114, 68, 253);
+  margin: 0;
+}
+
+header > h1 {
+  color: white;
+  margin: 0;
+  font-size: 15px;
+  padding: 5px;
+  text-align: center;
+  font-weight: 100;
+}
+
+main {
+  margin: 10px;
+}
+
+#sel-container {
+  margin: 10px;
+}
+
+#main-dropdow {
+  width: 50%;
+  background-color: rgb(240, 240, 240);
+  border-radius: 5px;
+  font-family: "Courier New", Courier, monospace;
+}
+
+#table-container {
+  display: flex;
+}
+
+#expense-container {
+  background-color: rgb(211, 234, 246);
+  flex: 1;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+#expense-container > input,
+textarea,
+select,
+button {
+  width: 100%;
+}
+
+#expense-type {
+  background-color: rgb(240, 240, 240);
+  border-radius: 5px;
+  font-family: "Courier New", Courier, monospace;
+}
+
+#save-btn,
+#submit-btn {
+  background-color: rgb(240, 240, 240);
+  border-radius: 5px;
+  font-family: "Courier New", Courier, monospace;
+  border: 1px solid black;
+  margin-top: 5px;
+}
+
+#budget-container {
+  background-color: rgb(211, 234, 246);
+  flex: 1;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+#budget-container > input,
+button {
+  width: 100%;
+}
