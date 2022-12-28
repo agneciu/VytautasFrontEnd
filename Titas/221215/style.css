@@ -26,10 +26,10 @@ main {
 
 #sel-container {
   margin: 10px;
+  width: 50%;
 }
 
 #main-dropdow {
-  width: 50%;
   background-color: rgb(240, 240, 240);
   border-radius: 5px;
   font-family: "Courier New", Courier, monospace;
@@ -37,6 +37,7 @@ main {
 
 #table-container {
   display: flex;
+  width: 50%;
 }
 
 #expense-container {
@@ -44,6 +45,7 @@ main {
   flex: 1;
   padding: 10px;
   border-radius: 10px;
+  
 }
 
 #expense-container > input,
@@ -68,11 +70,17 @@ button {
   margin-top: 5px;
 }
 
+#save-btn:hover,
+#submit-btn {
+cursor: pointer;
+}
+
 #budget-container {
   background-color: rgb(211, 234, 246);
   flex: 1;
   padding: 10px;
   border-radius: 10px;
+  
 }
 
 #budget-container > input,

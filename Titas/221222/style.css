@@ -1,0 +1,45 @@
+* {
+margin: 0;
+box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: beige;
+    height: 100vh;
+   
+}
+
+.form-container {
+    background-color: white;
+    height: 200px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;
+
+}
+
+.form-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:10px;
+}
+
+.hidden {
+    display:none;
+}
+
+.error {
+    border-color: red;
+}
