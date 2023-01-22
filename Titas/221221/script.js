@@ -26,5 +26,5 @@ function createKey() {
 }
 
 function createSelection() {
-    const selection = document.createElement("selection")''
+    const selection = document.createElement("selection");
 }
