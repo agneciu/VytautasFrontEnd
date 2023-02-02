@@ -1,0 +1,89 @@
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 65vh;
+    background-color: rgb(52, 21, 91);
+    border-radius: 1vh;
+    padding: 5vh;
+    position: absolute;
+    top:50%;
+    left:50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.header {
+    color: white;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 2vh;
+}
+.groceries {
+display: flex;
+gap:1px;
+margin-bottom: 2vh;
+}
+
+.grocery-input {
+    font-size: 20px;
+    padding: 1vh;
+    flex:1;
+    border-radius: 1vh 0 0 1vh;
+    border: none;
+    
+}
+
+.add-btn ,
+.edit-btn {
+    font-size: 20px;
+    padding: 1vh;
+    color: rgb(72, 70, 70);
+    border: none;
+    border-radius: 0 1vh 1vh 0;
+}
+
+.trash-btn,
+.edit-text-btn {
+    border: none;
+    background-color: transparent;
+}
+
+.edit-text-btn {
+    color: rgb(112, 112, 249);
+    
+}
+.trash-btn {
+    color: rgb(222, 52, 52);
+    
+}
+
+.list-conatiner {
+    display: flex;
+    padding: 1vh;
+}
+
+.grocery-item {
+    flex:1;
+    color: white;
+}
+
+.remove-btn {
+    border: 2px solid rgb(175, 173, 173);
+    border-radius: 1vh;
+    color: rgb(175, 173, 173) ;
+    font-size: 20px;
+    margin-top: 2vh;
+}
+
+.hidden {
+    display: none;
+}
+
+.add-btn:hover ,
+.edit-btn:hover ,
+.remove-btn:hover,
+.edit-text-btn ,
+.trash-btn {
+    cursor: pointer;
+} 

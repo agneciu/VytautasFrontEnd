@@ -1,0 +1,78 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    background-color: rgb(71, 58, 128);
+    width:300px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 5px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.heading {
+    color: white;
+    margin:10px 0px 10px 0px;
+    text-align: center;
+}
+
+#grocery-input {
+ flex:1;
+ border: none;
+ border-radius: 5px 0 0 5px;
+ padding:7px;
+}
+
+#add-btn{
+    border: none;
+    border-radius:0px 5px 5px 0px;
+    padding:7px;
+}
+
+.input-container {
+    display: flex;
+    gap:1px;
+}
+
+#remove-all-btn{
+    border: 1px solid grey;
+    border-radius: 5px;
+    color: grey;
+    margin-top:10px;
+}
+
+#add-btn:hover,
+#remove-all-btn:hover{
+    cursor: pointer;
+}
+
+.grocery-container {
+    display: flex;
+}
+
+.grocery-added {
+    flex:1;
+    color:white;
+    font-size: 12px;
+}
+
+.edit ,
+.delete {
+    background-color: transparent;
+    border: none;
+}
+
+.edit {
+    color: rgb(40, 118, 128);
+}
+
+.delete {
+    color: rgb(174, 60, 60);
+}
+

@@ -69,13 +69,13 @@
 // 3. Write a range function that takes two arguments, start and end, and returns an array containing 
 //all the numbers from start up to (and including) end. for example: range(1, 3) // [1, 2, 3]
 
-// const rangeFunction = (start, end) => {
-//     const result = [];
-//     for (let i = start; i <= end; i++) {
-//         result.push(i);
-//     }
-//     return result
-// }
+const rangeFunction = (start, end) => {
+    const result = [];
+    for (let i = start; i <= end; i++) {
+        result.push(i);
+    }
+    return result
+}
 
 // console.log(rangeFunction(1,5));
 
@@ -86,17 +86,43 @@
 // in the inverse order. The second, reverseArrayInPlace, does what the reverse method does: it modifies the array given as 
 //argument by reversing its elements. Neither may use the standard reverse method.
 
-const myArray = [1,3,5,7,9];
+// const myArray = [1,3,5,7,9];
 
-const reverseArray = (myArray) => {
- const backwardsArray = [];
+// const reverseArray = (myArray) => { 
+//  const backwardsArray = [];
 
-while (i = myArray.pop())
+// while (i = myArray.pop())
 
-myArray.push(i)
+// myArray.push(i)
 
-return backwardsArray
+// return backwardsArray
+
+// };
+
+// console.log(reverseArray());
+
+const reverseArray = (array) => {
+     const result =  [];
+
+     for (let i = 0; i < array.length; i++) {
+        result.unshift(array[i]);
+
+     } 
+     return result
+};
+
+const reverseArrayInPlace = (array) => {
+ let currentIteratedValue;
+ for (let i = 0; i < Math.floor(array.lenght / 2); i++) {
+    currentIteratedValue = array [i];
+    const switchWith = array[array.lenght - 1 - i];
+    array[i] = switchWith;
+    array[array.lenght - 1 - i ] = currentIteratedValue;
+ } 
 
 };
 
-console.log(reverseArray());
+const arrayToBeModified =  [5, 3, 99];
+reverseArrayInPlace(arrayToBeModified);
+console.log(arrayToBeModified);
+
