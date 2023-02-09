@@ -44,6 +44,7 @@ const user = [
 // console.log(user);
 console.log("------------NEW-TASK--------------");
 
+//FILTER
 
 const users = [{
     id: Math.random(),
@@ -60,7 +61,7 @@ const users = [{
     hasIdentificationDocument: false,
     isBanned: false, },
     {
-    id: Math.random()
+    id: Math.random(),
     firstName: 'Allen',
     lastName: 'Green',
     age: 26,
@@ -81,4 +82,85 @@ const users = [{
     });
 
     console.log(specialConditions);
+
+    console.log("------------NEW-TASK--------------");
+
+    //MAP
+
+    const userFirstNames = users.map((users) => {
+        // return user.firstName;
+        return `${users.firstName} ${users.lastName}`;
+    });
+
+    console.log(userFirstNames);
+
+const hasDocument = users.filter((users) => {
+    if (users.hasIdentificationDocument) {
+        return true;
+    }
+});
+
+console.log(hasDocument);
+
+const hasIdAndFirstName = hasDocument.map((hasDocument) => {
+    return `id: ${hasDocument.id} name: ${hasDocument.firstName}`
+});
+
+console.log(hasIdAndFirstName);
+console.log("------------NEW-TASK--------------");
+
+// REDUCE
+//acc - accumulator
+//expected output [underAgeUsersArray, restOfUsersArray] 
+//
+const userGroups = users.reduce((acc, user) => {
+    if(user.age >= 21) {
+        
+        acc[1].push(user);
+    }
+    else {
+        
+        acc[0].push(user);
+    }
+    return acc;
+}, [[],[]]);
+
+const userGroupsAsObject = users.reduce((acc, user) => {
+if (user.age >= 21) {
+    acc.adults.push(user);
+} else {
+    acc.underaged.push(user);
+}
+return acc;
+},{ underaged: [], adults: []})
+
+console.log(userGroupsAsObject);
+
+const helloText = users.reduce((welcomingText, user, index) => {
+    return `${welcomingText}${index ? ',' : ' '} ${user.firstName}`;
+}, "Hello: ");
+
+console.log(helloText)
+
+const adultFilter = users.filter((users) => {
+    if (users.age >= 21) {
+        return true;
+    };
+});
+
+const newProject = adultFilter.reduce((acc, adultFilter) => {
+if (adultFilter.isBanned === true) {
+    acc.banned.push(adultFilter);
+} if (adultFilter.hasIdentificationDocument === true) {
+    acc.withDocs.push(adultFilter);
+}
+
+return acc
+
+}, {banned: [], withDocs: []}); 
+
+console.log(adultFilter);
+console.log(newProject);
+
+
 

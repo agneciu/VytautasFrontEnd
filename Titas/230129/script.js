@@ -1,19 +1,30 @@
+import { getDataFromLocalStorage } from "./getDataFromLocalStorage.js";
+import { setDataToLocalStorage } from "./setDataToLocalStorage.js";
+import { setUpLocalStorage } from "./setUpLocalStorage.js";
+import { localStorageKeys } from "./localStorageKeys.js";
+
 const groceryInput = document.querySelector("#grocery-input");
 const addButton = document.querySelector("#add-btn");
 const groceryList = document.querySelector("#grocery-list");
 const deleteAllButton = document.querySelector("#remove-all-btn");
+
+
+setUpLocalStorage();
 
 let groceries = [];
 
 function addGroceries() {
     groceryList.innerText = "";
 
-    groceries.forEach((grocery, index) => {
+
+
+    groceries.forEach((newGroceries, index) => {
       const newContainer = document.createElement("div");
       newContainer.classList.add("grocery-container");
       const newItem = document.createElement("p");
+      newItem.textContent = newGroceries.name;
       newItem.classList.add('grocery-added')
-      newItem.textContent = grocery;
+      newItem.textContent = newGroceries;
       groceryList.append(newContainer);
       newContainer.append(newItem);
 
@@ -26,7 +37,14 @@ function addGroceries() {
       newContainer.append(editButton);
 
       editButton.addEventListener("click", () => {
-        groceryInput.value = grocery;
+        const groceryItems = getDataFromLocalStorage(localStorageKeys.groceries);
+        const editableGroceryIndex = groceryItems.findIndex((groceryFromLocalStorage) => {
+          if (groceryFromLocalStorage.id === newGroceries.id) {
+            return true;
+          }
+        })
+        console.log(editableGroceryIndex);
+        groceryInput.value = newGroceries;
         addButton.textContent = "Edit";
         groceries.splice(index, 1);
       });
@@ -42,14 +60,20 @@ function addGroceries() {
       deleteButton.addEventListener("click", () => {
         groceries.splice(index, 1);
         addGroceries();
-        localStorage.setItem("groceries", JSON.stringify(groceries));
+        
       });
       
       groceryList.append(newContainer);
     });
+    
   }
 
   addButton.addEventListener("click", () => {
+    const newGroceries = {
+      id: Math.random(),
+      name: groceryInput.value,
+    };
+
     if (addButton.textContent === "Add") {
       groceries.push(groceryInput.value);
       groceryInput.value = "";
@@ -58,19 +82,26 @@ function addGroceries() {
       addButton.textContent = "Add";
       groceryInput.value = "";
     }
-    addGroceries();
-    localStorage.setItem("groceries", JSON.stringify(groceries));
+    addGroceries(newGroceries);
+    const groceryItems = getDataFromLocalStorage(localStorageKeys.groceries);
+
+    setDataToLocalStorage(localStorageKeys.groceries, [...groceryItems,newGroceries]);
+    
   });
   
   deleteAllButton.addEventListener("click", () => {
     groceries = [];
     addGroceries();
-    localStorage.setItem("groceries", JSON.stringify(groceries));
+    
   });
   
   addGroceries();
 
 
+const groceriesFromLocalStorage = getDataFromLocalStorage(localStorageKeys.groceries);
+groceriesFromLocalStorage.forEach((grocery) => {
+  addGroceries(grocery);
+});
 
 
 
@@ -83,26 +114,3 @@ function addGroceries() {
 
 
   
-//   const localStorageKeys = {
-//     groceries: 'groceries',
-// }
-
-//   const getDataFromLocalStorage = (key) => {
-//     return JSON.parse(window.localStorage.getItem(key));
-// }
-
-// const setDataToLocalStorage = (key, data) => {
-//   window.localStorage.setItem(key, JSON.stringify(data));
-// }
-  
-// const groceriesFromLocalStorage = getDataFromLocalStorage(localStorageKeys.groceries);
-// groceriesFromLocalStorage.forEach((grocery) => {
-//     createGroceryItem(grocery);
-// })
-
-// const setupLocalStorage = () => {
-//   const groceriesFromLocalStorage = getDataFromLocalStorage(localStorageKeys.groceries);
-//   if (!groceriesFromLocalStorage) {
-//       setDataToLocalStorage(localStorageKeys.groceries, []);
-//   }
-// }
